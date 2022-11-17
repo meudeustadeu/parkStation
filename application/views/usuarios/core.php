@@ -41,6 +41,8 @@
                                 <div class="card-body">
 
 
+
+
                                     <form class="forms-sample" name="form_core" method="post">
                                         <div class="form-group row">
                                             <div class="col-md-6 mb-20">
@@ -135,8 +137,3 @@
                 </div>
             </footer>
         </div>
-
-        <script>
-            $.notify("Hello World");
-            notify();
-        </script>

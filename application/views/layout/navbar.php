@@ -78,7 +78,6 @@
                                 <a class="dropdown-item" href="login.html"><i class="ik ik-power dropdown-icon"></i> Logout</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
