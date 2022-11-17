@@ -1,8 +1,4 @@
 </div>
-
-
-
-
 <div class="modal fade apps-modal" id="appsModal" tabindex="-1" role="dialog" aria-labelledby="appsModalLabel" aria-hidden="true" data-backdrop="false">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ik ik-x-circle"></i></button>
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -88,26 +84,32 @@
     </div>
 </div>
 
-<script src="<?php echo base_url('public/');?>src/js/vendor/modernizr-2.8.3.min.js;"></script>
-<script src="<?php echo base_url('public/');?>src/js/vendor/jquery-3.3.1.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/popper.js/dist/umd/popper.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/screenfull/dist/screenfull.js"></script>
-<!-- <script src="<?php echo base_url('public/');?>plugins/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/jvectormap/jquery-jvectormap.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/moment/moment.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/d3/dist/d3.min.js"></script>
-<script src="<?php echo base_url('public/');?>plugins/c3/c3.min.js"></script>
-<script src="<?php echo base_url('public/');?>js/tables.js"></script>
-<script src="<?php echo base_url('public/');?>js/widgets.js"></script>
-<script src="<?php echo base_url('public/');?>js/charts.js"></script> -->
-<script src="<?php echo base_url('public/');?>dist/js/theme.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>src/js/vendor/modernizr-2.8.3.min.js;"></script>
+<script src="<?php echo base_url('public/'); ?>src/js/vendor/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/popper.js/dist/umd/popper.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/screenfull/dist/screenfull.js"></script>
+<!-- <script src="<?php echo base_url('public/'); ?>plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/jvectormap/jquery-jvectormap.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/moment/moment.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/d3/dist/d3.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>plugins/c3/c3.min.js"></script>
+<script src="<?php echo base_url('public/'); ?>js/tables.js"></script>
+<script src="<?php echo base_url('public/'); ?>js/widgets.js"></script>
+<script src="<?php echo base_url('public/'); ?>js/charts.js"></script> -->
+<script src="<?php echo base_url('public/'); ?>dist/js/theme.min.js"></script>
+
+<?php if (isset($scripts)) : ?>
+    <?php foreach ($scripts as $script) : ?>
+        <script src="<?php echo base_url('public/'. $script); ?>"></script>
+    <?php endforeach ?>
+<?php endif ?>
 </body>
 
 </html>

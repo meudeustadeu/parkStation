@@ -13,11 +13,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo base_url('public/plugins/bootstrap/dist/css/bootstrap.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('public/plugins/fontawesome-free/css/all.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('public/plugins/icon-kit/dist/css/iconkit.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('public/plugins/ionicons/dist/css/ionicons.min.css'); ?>">
-    <link rel="stylesheet" href="<?php echo base_url('public/plugins/perfect-scrollbar/css/perfect-scrollbar.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('public/plugins/bootstrap/dist/css/bootstrap.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('public/plugins/fontawesome-free/css/all.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('public/plugins/icon-kit/dist/css/iconkit.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('public/plugins/ionicons/dist/css/ionicons.min.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('public/plugins/perfect-scrollbar/css/perfect-scrollbar.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/js/notify.js'); ?>">
 
     <!-- <link rel="stylesheet" href="<?php echo base_url('public/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('public/plugins/jvectormap/jquery-jvectormap.css'); ?>">
@@ -27,7 +28,11 @@
     <link rel="stylesheet" href="<?php echo base_url('public/plugins/owl.carousel/dist/assets/owl.carousel.min.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('public/plugins/owl.carousel/dist/assets/owl.theme.default.min.css'); ?>"> -->
     <link rel="stylesheet" href="<?php echo base_url('public/dist/css/theme.min.css'); ?>">
-
+    <?php if (isset($styles)) :  ?>
+        <?php foreach ($styles as $style) : ?>
+            <link rel="stylesheet" href="<?php echo base_url('public' . $style); ?>">
+        <?php endforeach ?>
+    <?php endif ?>
 </head>
 
 <body>
